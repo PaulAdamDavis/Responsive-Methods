@@ -1,0 +1,81 @@
+body.home {
+	#contact {
+		.box-shadow(inset 0px 0px 15px 1px rgba(0,0,0,0.6));
+		.wrapper {
+			position: relative;
+		}
+		color: #ccc;
+		.text ul, .hentry ul, .text ol, .hentry ol {
+			padding-left: 15px;
+			li {
+				color: #ccc;
+			}
+		}
+	}
+}
+
+#contactform {
+	label {
+		display: block;
+	}
+	input {
+		display: block;
+	}
+	textarea {
+		display: block;
+		height: 80px;
+	}
+	input, textarea {
+		background: rgba(255,255,255,0.2);
+		padding: 5px 8px;
+		border: 3px solid rgba(0,0,0,0.3);
+		width: 100%;
+		font-size: 14px;
+		line-height: 18px;
+		-webkit-appearance: none;
+		color: #fff;
+		.font;
+		&.error {
+			border-color: fade(@brand, 40) !important;
+		}
+	}
+	button {
+		margin: 15px 0 0 0;
+		background: rgba(255,255,255,0.2);
+		padding: 5px 8px;
+		border: 3px solid rgba(0,0,0,0.3);
+		color: #999;
+		font-weight: bold;
+		font-size: 0.8em;
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+		&:hover {
+			background: rgba(255,255,255,0.3);
+		}
+		&:active {
+			.inner-shadow();
+		}
+		&[disabled='disabled'] {
+			.opacity(60);
+			cursor: not-allowed;
+			&:hover {
+				#gradient > .vertical(#eee, #ccc);
+			}
+			&.sent {
+				#gradient > .vertical(#99cc33, #83af2b);
+				color: #fff;
+				text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+				border-color: transparent;
+			}
+			&.error {
+				#gradient > .vertical(#cc0033, #990000);
+				color: #fff;
+				text-shadow: 1px 1px 1px rgba(255,255,255,0.4);
+				border-color: transparent;
+			}
+		}
+		&.loading {
+			color: #000;
+			text-shadow: 1px 1px 1px #fff, -1px -1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff;
+		}
+	}
+}

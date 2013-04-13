@@ -1,0 +1,31 @@
+#portfolio {
+	@total_height: 500px;
+	height: @total_height;
+	width: 100%;
+	.portfolio_item {
+		width: 50%;
+		height: (@total_height / 2);
+		float: left;
+		position: relative;
+		overflow: hidden;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			opacity: 0.3;
+			-webkit-filter: grayscale(1);
+			.transition;
+			&:hover {
+				opacity: 1;
+				-webkit-filter: grayscale(0);
+			}
+		}
+	}
+	&:hover {
+		img {
+			-webkit-filter: blur(10px) grayscale(1);
+		}
+	}
+}

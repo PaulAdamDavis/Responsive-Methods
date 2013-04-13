@@ -1,0 +1,107 @@
+.texture {
+	.mask("@{images}/mask_darker.png");
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
+	color: #fff;
+}
+p, li {
+	line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1;
+	padding: 0.25em 0;
+}
+h1 {
+	font-size: 49px;
+}
+h2 {
+	font-size: 42px;
+}
+h3 {
+	font-size: 36px;
+}
+h4 {
+	font-size: 30px;
+}
+h5 {
+	font-size: 24px;
+}
+h6 {
+	font-size: 20px;
+}
+a {
+	&:link, &:visited {
+		color: @brand;
+		text-decoration: none;
+	}
+	&:hover, &:active, &:focus {
+		/*color: darken(@brand, 20);*/
+		color: lighten(@brand, 20);
+	}
+	&:active {
+		position: relative;
+		top: 1px;
+	}
+}
+em, i {
+	font-style: italic;
+}
+b, strong, .bold, .strong {
+	font-weight: bold;
+}
+.text, .hentry {
+	ul, ol {
+		padding-left: 30px;
+		margin-bottom: 1em;
+		li {
+			list-style: outside;
+			font-size: 14px;
+			color: #444;
+			line-height: 20px;
+		}
+	}
+	ol {
+		li {
+			list-style-type: decimal;
+		}
+	}
+	p {
+		margin-bottom: 1em;
+		&.small_stuff {
+			font-size: 11px;
+			line-height: 13px;
+			.opacity(60);
+		}	
+	}
+}
+small, .small {
+	font-size: smaller;
+}
+p.right {
+	text-align: right;
+}
+::selection {
+	background: @brand;
+	color: #fff;
+}
+::-moz-selection {
+	background: @brand;
+	color: #fff;
+}
+abbr[title] {
+	border-color: #444;
+}
+/*****
+	MOBILE FIXES
+*****/
+.touch {
+	abbr[title] {
+		border-bottom: 0 !important;
+	}
+	-webkit-text-size-adjust: none;
+}
+
+a {
+	.transition;
+}
