@@ -1,13 +1,7 @@
-img {
-	max-width: 100%;
-}
 .amp {
 	font-family: Baskerville, Palatino, "Book Antiqua", serif;
 	font-style: italic;
 	font-weight: normal;
-}
-.grayscale {
-	-webkit-filter: grayscale(1);
 }
 .brand, .red {
 	color: @brand;
@@ -27,81 +21,11 @@ img {
 		color: darken(@brand, 20);
 	}
 }
-.two_cols {
-	.clearfix;
-	.left, .right {
-		width: 48%;
-		i, em {
-			display: inline;
-			&:after {
-				display: none;
-			}
-		}
-	}
-	&.thirds {
-		.left {
-			width: 68%;
-		}
-		.right {
-			width: 28%;
-		}
-	}
-	.left {
-		float: left;
-	}
-	.right {
-		float: right;
-	}
-}
 .center {
 	text-align: center;
 }
 .black_30 {
 	background: rgba(0,0,0,0.3);
-}
-
-
-.full_width_shadow_top {
-	position: relative;
-	padding-top: 55px;
-	padding-bottom: 50px;
-	&:before {
-		content: "";
-		border-top: 1px solid rgba(255,255,255,0.1);
-		position: absolute;
-		top: 0;
-		left: -50%;
-		width: 200%;
-		height: 100px;
-		display: block;
-		#gradient > .vertical(rgba(0,0,0,0.4), rgba(0,0,0,0));
-	}
-}
-
-.two_cols {
-	zoom: 1;
-	:after {
-		display: block;
-		visibility: hidden;
-		height: 0;
-		clear: both;
-		content: ".";
-	}
-}
-.two_cols .left, .two_cols .right {
-	width: 48%;
-}
-.two_cols.thirds .left {
-	width: 68%;
-}
-.two_cols.thirds .right {
-	width: 28%;
-}
-.two_cols .left {
-	float: left;
-}
-.two_cols .right {
-	float: right;
 }
 
 

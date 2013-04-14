@@ -1,28 +1,12 @@
-/*****
-	LESS
-*****/
-@import "_animate";
 @import "_lesslib";
 @brand: #5a87e2;
-.shadow() {
-	.box-shadow(0px 0px 10px rgba(0,0,0,0.16));
-}
 @images: '../../images';
 .font() {
 	font-family: "proxima-nova", "Proxima Nova", Helvetica, sans-serif;
 }
-
-
 .header_ani_part {
 	position: relative;
 	display: inline-block;
-}
-
-.ani_delay_1 {
-	.delay(0.7s);
-}
-.ani_delay_2 {
-	.delay(1.7s);
 }
 
 /*****
@@ -64,7 +48,6 @@ body {
 .wrapper {
 	font-size: 16px;
 	line-height: 25px;
-	max-width: 1400px;
 	padding: 0 20px;
 	margin: 0 auto;
 	&.projects {
@@ -74,30 +57,6 @@ body {
 .overflow-hidden {
 	overflow: hidden;
 }
-
-
-
-.darker_hr {
-	border-top: 1px solid #bbb;
-	border-bottom: 1px solid #fff;
-	margin-bottom: 20px;
-}
-
-
-
-.services_grid {
-	.intro {
-		h3 {
-			float: left;
-			width: 25%;
-		}
-		p {
-			float: right;
-			width: 73.5%;
-		}
-	}
-}
-
 
 
 /*****
@@ -112,9 +71,10 @@ body {
 	FOOTER
 *****/
 .footer {
-	background: fade(#000, 20);
+	background: rgba(0,0,0,0.2);
 	padding: 25px 0;
-	.box-shadow(0px 0px 10px rgba(0,0,0,0.16));
+	.box-shadow(0px 0px 15px 1px rgba(0,0,0,0.6));
+	clear: both;
 	small {
 		line-height: 20px;
 		font-size: 14px;
@@ -124,29 +84,59 @@ body {
 }
 
 
-
-
-/*****
-	GENERAL STYLING
-*****/
-@import "_type";
-
-
-/*****
-	HELPER CLASSES FOR CONTENT
-*****/
-@import "_helpers";
-
-
-
-
 /*****
 	IMPORTS
 *****/
+@import "_type";
+@import "_helpers";
 @import "_header";
-@import "_media_queries";
 
-@import "_contact";
-@import "_gallery";
-@import "_services";
-@import "_page";
+
+/*****
+	Responsive Stuffs
+*****/
+@media (max-width: 700px) {
+	.headline.normal {
+		margin: 40px auto;
+		h2 {
+			display: none;
+		}
+	}
+}
+@media (max-width: 600px) {
+	.headline {
+		.part {
+			font-size: 25px !important;
+		}
+	}
+	.strapline h4 {
+		font-size: 18px;
+		line-height: 24px;
+		br {
+			display: none;
+		}
+	}
+}
+
+
+.links {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.link_list_container {
+	float: left;
+	width: 400px;
+}
+.link_list {
+	background: rgba(0,0,0,0.2);
+	border: 1px solid #111;
+	.box-shadow(0 0 15px 1px rgba(0,0,0,0.6));
+	margin: 20px;
+	padding: 10px 20px 20px;
+	ul {
+		padding-left: 20px;
+		li {
+			list-style-position: outside;
+		}
+	}
+}
